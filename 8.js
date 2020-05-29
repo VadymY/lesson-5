@@ -17,7 +17,6 @@
 
 // Решение
 
-//function f (...args)
 function f (args)
 {
     if (typeof(args) !== "object" || !args)
