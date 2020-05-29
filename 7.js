@@ -39,6 +39,4 @@ function getDivisors(num)
 
 getDivisors(12); // [1, 2, 3, 4, 6, 12]
 
-console.log(getDivisors(12));
-
 exports.getDivisors = getDivisors;

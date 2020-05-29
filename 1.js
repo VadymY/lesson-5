@@ -19,6 +19,6 @@ function f(num)
     }
 }
 
-console.log(f(2)); // 8
+f(2); // 8
 
 exports.f = f;
