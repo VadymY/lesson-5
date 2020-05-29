@@ -30,7 +30,7 @@ function getDivisors(num)
     for (let i = 1 ; i <= num; i++)
     {
         if (num % i  === 0) {
-            ar = ar.concat(i);
+            ar.push(i);
         }
     }
 
