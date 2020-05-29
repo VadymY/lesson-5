@@ -23,7 +23,7 @@ function getDivisors(num)
 
     if (num < 1)
     {
-        throw new Error("argument must be more then 0");
+        throw new Error("argument must be at least 1");
     }
 
     let ar = [];
