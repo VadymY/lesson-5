@@ -11,17 +11,25 @@
 // Решение
 
 function f(...args){
-    for (let i of args)
-    {
-        if (typeof(i) !== "number")
-        {
-            throw new Error("not a number");
+    let sum = 0;
+    for (let i of args) {
+        try {
+            if (typeof (i) !== "number") {
+
+                throw new Error("Not a number");
+            }
+        }
+        catch (e) {
+            console.log(e.message);
+        }
+        finally{
+            sum += i;
         }
     }
 
-    return f.arguments.length;
+    return sum;
 }
 
-console.log(f(1, 1, 1, 2, 1, 1, 1, 1)); // 8
+console.log(f(1, 1, 1, 2, 1, 1, 1, 1)); // 9
 
 exports.f = f;

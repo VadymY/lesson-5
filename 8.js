@@ -17,26 +17,27 @@
 
 // Решение
 
-function f (...args)
+//function f (...args)
+function f (args)
 {
-    if (typeof(args) !== "object" || !args[0])
+    if (typeof(args) !== "object" || !args)
     {
         throw new Error("not an array");
     }
 
-    if (args[0].length == 0)
+    if (args.length == 0)
     {
         throw new Error("array must be not empty");
     }
 
-    if (args[0].length === 1)
+    if (args.length === 1)
     {
-        return console.log(args[0][0]);
+        return console.log(args[0]);
     }
 
-   let temp = args[0].splice(0, args[0].length - 1);
+   let temp = args.splice(0, args.length - 1);
    f(temp);
-    return console.log(args[0][0]);
+   return console.log(args[0]);
 }
 
 f([1, 2, 3]);
