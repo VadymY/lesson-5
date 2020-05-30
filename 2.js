@@ -13,17 +13,20 @@
 function f(...args){
     let sum = 0;
     for (let i of args) {
+        let cond = false;
         try {
             if (typeof (i) !== "number") {
-
                 throw new Error("Not a number");
             }
         }
         catch (e) {
             console.log(e.message);
+            cond = true;
         }
         finally{
-            sum += i;
+            if (!cond) {
+                sum += i;
+            }
         }
     }
 
